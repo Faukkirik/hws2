@@ -1,7 +1,7 @@
 .sendForm {
     display: flex;
-    border: #cc0000;
-    border: 1px solid lightcoral;
+
+
     justify-content: space-between;
 
 }
@@ -12,9 +12,10 @@
     border-radius: 20px;
     width: 850px;
     min-height: 40px;
-    border: 1px solid aqua;
+
     outline: none;
     resize: none;
+    border: none;
 }
 
 .button {
