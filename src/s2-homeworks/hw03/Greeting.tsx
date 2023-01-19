@@ -1,6 +1,6 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
-import {UserType} from "./HW3";
+
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -9,7 +9,7 @@ type GreetingPropsType = {
     onBlur: ()=>void // need to fix any
     onEnter: (e: KeyboardEvent<HTMLInputElement>)=>void // need to fix any
     error: string // need to fix any
-    totalUsers: any // need to fix any
+    totalUsers: number // need to fix any
     lastUserName?: string // need to fix any
 }
 
@@ -26,7 +26,7 @@ const Greeting: React.FC<GreetingPropsType> = (
         lastUserName,
     } // деструктуризация пропсов
 ) => {
-    const inputClass = s.errorInput // need to fix with (? s.errorInput : s.input)
+    const inputClass = error ? s.errorInput : s.input // need to fix with (? s.errorInput : s.input)
 
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
